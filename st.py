@@ -7,16 +7,19 @@
 #import basic softioc framework
 from softioc import softioc, builder
 
-#import the application
+#import the applications
 import caenMonit
+
+from imadj import imadj
+im = imadj()
 
 #run the ioc
 builder.LoadDatabase()
 softioc.iocInit()
 
-#start the application
+#start the applications
 caenMonit.run_caenMonit()
-
+im.init()
 
 #start the ioc shell
 softioc.interactive_ioc(globals())
