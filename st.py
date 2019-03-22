@@ -19,7 +19,6 @@ softioc.iocInit()
 
 #start the applications
 caenMonit.run_caenMonit()
-im.init()
 
 #start the ioc shell
 softioc.interactive_ioc(globals())
